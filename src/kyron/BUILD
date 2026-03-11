@@ -23,8 +23,8 @@ _KYRON_DEPS = (
     select({
         "//conditions:default": [],
         "//src/flags:enable_ipc": [
-            "@score_crates//:iceoryx2_qnx8",
-            "@score_crates//:iceoryx2_cal_qnx8",
+            "@iceoryx2_crates//:iceoryx2",
+            "@iceoryx2_crates//:iceoryx2_cal",
         ],
     })
 )
@@ -41,8 +41,7 @@ rust_library(
         "//src/flags:runtime_disable_time_correction": ["disable_vm_correction"],
         "//src/flags:enable_ipc": ["iceoryx2-ipc"],
     }) + [
-        "bazel_build_iceoryx2_qnx8",
-        "tracing",
+        "tracing"
     ],
     crate_name = "kyron",
     proc_macro_deps = [

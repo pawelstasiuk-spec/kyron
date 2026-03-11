@@ -16,15 +16,14 @@ rust_library(
     name = "liblogging_tracing",
     srcs = glob(["src/**/*.rs"]),
     crate_features = [
-        "bazel_build_iceoryx2_qnx8",
-        "tracing",
+        "tracing"
     ],
     crate_name = "logging_tracing",
     visibility = ["//visibility:public"],
     deps = [
         "//src/kyron-foundation:libkyron_foundation",
         "@score_crates//:env_logger",
-        "@score_crates//:iceoryx2_qnx8",
+        "@iceoryx2_crates//:iceoryx2",
         "@score_crates//:tracing",
         "@score_crates//:tracing_subscriber",
     ],

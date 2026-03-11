@@ -16,25 +16,24 @@ rust_library(
     name = "libkyron_foundation",
     srcs = glob(["src/**/*.rs"]),
     crate_features = [
-        "bazel_build_iceoryx2_qnx8",
-        "tracing",
+        "tracing"
     ],
     crate_name = "kyron_foundation",
     proc_macro_deps = [
-        "@score_crates//:iceoryx2_bb_derive_macros_qnx8",
+        "@iceoryx2_crates//:iceoryx2_bb_derive_macros",
     ],
     visibility = ["//visibility:public"],
     deps = [
-        "@score_crates//:iceoryx2_bb_container_qnx8",
-        "@score_crates//:iceoryx2_bb_elementary_qnx8",
-        "@score_crates//:iceoryx2_bb_elementary_traits_qnx8",
-        "@score_crates//:iceoryx2_bb_lock_free_qnx8",
-        "@score_crates//:iceoryx2_bb_memory_qnx8",
-        "@score_crates//:iceoryx2_bb_posix_qnx8",
-        "@score_crates//:iceoryx2_bb_system_types_qnx8",
-        "@score_crates//:iceoryx2_bb_testing_qnx8",
-        "@score_crates//:iceoryx2_bb_threadsafe_qnx8",
-        "@score_crates//:iceoryx2_pal_concurrency_sync_qnx8",
+        "@iceoryx2_crates//:iceoryx2_bb_container",
+        "@iceoryx2_crates//:iceoryx2_bb_elementary",
+        "@iceoryx2_crates//:iceoryx2_bb_elementary_traits",
+        "@iceoryx2_crates//:iceoryx2_bb_lock_free",
+        "@iceoryx2_crates//:iceoryx2_bb_memory",
+        "@iceoryx2_crates//:iceoryx2_bb_posix",
+        "@iceoryx2_crates//:iceoryx2_bb_system_types",
+        "@iceoryx2_crates//:iceoryx2_bb_testing",
+        "@iceoryx2_crates//:iceoryx2_bb_threadsafe",
+        "@iceoryx2_crates//:iceoryx2_pal_concurrency_sync",
         "@score_crates//:tracing",
         "@score_crates//:tracing_subscriber",
     ],
@@ -44,7 +43,6 @@ rust_test(
     name = "tests",
     crate = ":libkyron_foundation",
     crate_features = [
-        "bazel_build_iceoryx2_qnx8",
-        "tracing",
+        "tracing"
     ],
 )
