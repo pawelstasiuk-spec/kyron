@@ -24,7 +24,7 @@ _KYRON_DEPS = (
         "//conditions:default": [],
         "//src/flags:enable_ipc": [
             "@iceoryx2_crates//:iceoryx2",
-            "@iceoryx2_crates//:iceoryx2_cal",
+            "@iceoryx2_crates//:iceoryx2-cal",
         ],
     })
 )
