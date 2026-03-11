@@ -86,7 +86,11 @@ use_repo(
     "score_qcc_x86_64_toolchain",
 )
 
-crate = use_extension("@rules_rust//crate_universe:extensions.bzl", "crate")
+crate = use_extension(
+    "@rules_rust//crate_universe:extensions.bzl",
+    "crate",
+    isolate = True,
+)
 crate.spec(package = "iceoryx2", version = "=0.7.0")
 crate.spec(package = "iceoryx2-bb-container", version = "=0.7.0")
 crate.spec(package = "iceoryx2-bb-elementary", version = "=0.7.0")
