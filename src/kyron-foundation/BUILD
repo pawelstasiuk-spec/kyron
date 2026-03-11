@@ -35,7 +35,7 @@ rust_library(
         "@iceoryx2_crates//:iceoryx2-bb-threadsafe",
         "@iceoryx2_crates//:iceoryx2-pal-concurrency_sync",
         "@score_crates//:tracing",
-        "@score_crates//:tracing-subscriber",
+        "@score_crates//:tracing_subscriber",
     ],
 )
 
